@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: ''
+    selector: 'meu-primeiro-component'
+    template: `
+      <p>Meu primeiro component com Angular 2!</p>
+    `
 })
-class MeuPrimeiroComponent {
+export class MeuPrimeiroComponent {
 
 }
