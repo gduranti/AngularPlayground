@@ -77,9 +77,20 @@
       <p>Você digitou o {{ nome }}</p>
     </div>
     <div>
-        <input type="text" [(ngModel)]="pessoa.nome" />
-        <input type="text" [(ngModel)]="pessoa.idade" />
-        <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade.</p>
+      <input type="text" [(ngModel)]="pessoa.nome" />
+      <input type="text" [(ngModel)]="pessoa.idade" />
+      <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade.</p>
+    </div>
+  </article>
+</section>
+
+
+<section>
+  <article>
+    <h3>Input/Output Property</h3>
+    <div>
+      <app-curso [nome]="nomeCurso" ></app-curso>
+      <contador valor="10" (mudouValor)="onMudouValor($event)"></contador>
     </div>
   </article>
 </section>
