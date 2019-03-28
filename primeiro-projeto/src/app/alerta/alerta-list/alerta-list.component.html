@@ -1,0 +1,16 @@
+<table>
+
+    <tr>
+        <td>Nome</td>
+    </tr>
+
+    <tr *ngFor="let alerta of alertas">
+        <td>
+            {{ alerta.nome }}
+        </td>
+        <td *ngFor="let etapa of alerta.serveridadePorEtapa | keyvalue" class="{{ etapa.value }}">
+            {{ etapa.value }}
+        </td>
+    </tr>
+
+</table>
