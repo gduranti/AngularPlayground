@@ -13,6 +13,7 @@ import { OutputPropertyComponent } from './output-property/output-property.compo
 import { CicloComponent } from './ciclo/ciclo.component';
 import { AlertaMensagemComponent } from './alerta/alerta-mensagem/alerta-mensagem.component';
 import { AlertaListComponent } from './alerta/alerta-list/alerta-list.component';
+import { EnderecoComponent } from './endereco/endereco.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AlertaListComponent } from './alerta/alerta-list/alerta-list.component'
     OutputPropertyComponent,
     CicloComponent,
     AlertaMensagemComponent,
-    AlertaListComponent
+    AlertaListComponent,
+    EnderecoComponent
   ],
   imports: [
     BrowserModule,

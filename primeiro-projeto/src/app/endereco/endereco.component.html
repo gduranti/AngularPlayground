@@ -1,0 +1,60 @@
+<div class="endereco">
+
+    <table>
+        <tr>
+            <td>
+                <label>CEP:</label>
+            </td>
+            <td>
+                <input [(ngModel)]="endereco.cep" (change)="onCepChanges()" />
+            </td>
+            <td colspan="2">
+                <div class="alert alert-warning" *ngIf="cepNaoEncontrado()">CEP não encontrado!</div>
+                <div class="alert alert-info" *ngIf="carregando">Carregando...</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>UF:</label>
+            </td>
+            <td>
+                <input [(ngModel)]="endereco.uf" />
+            </td>
+            <td>
+                <label>Município:</label>
+            </td>
+            <td>
+                <input [(ngModel)]="endereco.municipio" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Logradouro:</label>
+            </td>
+            <td>
+                <input [(ngModel)]="endereco.logradouro" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Número:</label>
+            </td>
+            <td>
+                <input [(ngModel)]="endereco.numero" />
+            </td>
+            <td>
+                <label>Complemento:</label>
+            </td>
+            <td>
+                <input [(ngModel)]="endereco.complemento" />
+            </td>
+            <td>
+                <label>Bairro:</label>
+            </td>
+            <td>
+                <input [(ngModel)]="endereco.bairro" />
+            </td>
+        </tr>
+    </table>
+
+</div>

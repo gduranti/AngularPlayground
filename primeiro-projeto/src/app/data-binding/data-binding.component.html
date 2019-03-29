@@ -15,6 +15,26 @@
   </article>
 
   <hr>
+  
+  <article>
+      <span class="badge badge-pill badge-primary">Primary</span>
+      <span class="badge badge-pill badge-secondary">Secondary</span>
+      <span class="badge badge-pill badge-success">Success</span>
+      <span class="badge badge-pill badge-danger">Danger</span>
+      <span class="badge badge-pill badge-warning">Warning</span>
+      <span class="badge badge-pill badge-info">Info</span>
+      <span class="badge badge-pill badge-light">Light</span>
+      <span class="badge badge-pill badge-dark">Dark</span>
+
+      <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated"
+               role="progressbar"
+               aria-valuenow="75"
+               aria-valuemin="0"
+               aria-valuemax="100"
+               style="width: 75%"></div>
+      </div>
+  </article>
 
   <article>
     <h3>Class and Style Binding</h3>
@@ -28,8 +48,11 @@
 
     <br><br>
 
-    <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'" [class.alert-info]="classe.value == 'alert-info'"
-      [class.alert-warning]="classe.value == 'alert-warning'" [class.alert-danger]="classe.value == 'alert-danger'">
+    <div class="alert" role="alert"
+      [class.alert-success]="classe.value == 'alert-success'"
+      [class.alert-info]="classe.value == 'alert-info'"
+      [class.alert-warning]="classe.value == 'alert-warning'"
+      [class.alert-danger]="classe.value == 'alert-danger'">
       A simple alert—check it out!
     </div>
 
@@ -53,14 +76,19 @@
       </button>
       <br><br>
 
-      <input type="text" (keyup)="onKeyUp($event)" (keyup.enter)="salvarValor($event.target.value)" (blur)="salvarValor(campoInput.value)"
-        #campoInput />
+      <input type="text"
+          (keyup)="onKeyUp($event)"
+          (keyup.enter)="salvarValor($event.target.value)"
+          (blur)="salvarValor(campoInput.value)"
+          #campoInput />
 
       <p>{{ valorAtual }} </p>
       <p>{{ valorSalvo }} </p>
       <br><br>
 
-      <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]="isMouseOver">
+      <span (mouseover)="onMouseOverOut()"
+          (mouseout)="onMouseOverOut()"
+          [class.highlight]="isMouseOver">
         Passe o mouse aqui</span>
 
     </div>
